@@ -1,18 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo file</title>
+  <meta charset="UTF-8">
+  <title>ChatGPT Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .chat-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .messages {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    .user-msg {
+      color: #007bff;
+    }
+    .ai-msg {
+      color: #28a745;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello</h1>
-    <h2>Everyone</h2>
-    <h3>How are you</h3>
-    <p>Lorem sit aimet consectetur adipisicing elit. Molestias, voluptas totam. 
-        Alias nam temporibus placeat voluptatibus
-        laboriosam totam ipsa aut saepe necessitatibus nobis, officiis suscipit eius?
-        It just a paragraph.
-    </p>
+
+  <div class="chat-container">
+    <h1>💬 ChatGPT Demo</h1>
+    <div class="messages" id="messages"></div>
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button id="sendBtn">Send</button>
+  </div>
+
+  <script>
+    const messagesEl = document.getElementById('messages');
+    const inputEl = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+    let history = [];
+
+    async function sendMessage() {
+      const userText = inputEl.value.trim();
+      if (!userText) return;
+
+      // Show user message
+      history.push({ role: 'user', content: userText });
+      messagesEl.innerHTML += '<div class="user-msg">You: ' + userText + '</div>';
+      inputEl.value = '';
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+
+      // Call ChatGPT API
+      try {
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_OPENAI_API_KEY'
+          },
+          body: JSON.stringify({
+            model: 'gpt-3.5-turbo',
+            messages: history
+          })
+        });
+
+        const data = await response.json();
+        const aiText = data.choices[0].message.content;
+        history.push({ role: 'assistant', content: aiText });
+
+        messagesEl.innerHTML += '<div class="ai-msg">AI: ' + aiText + '</div>';
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+      } catch (err) {
+        console.error(err);
+        messagesEl.innerHTML += '<div style="color:red;">Error: ' + err.message + '</div>';
+      }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    inputEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+
 </body>
 </html>
