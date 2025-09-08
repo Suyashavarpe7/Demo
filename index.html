@@ -109,7 +109,8 @@
 
         messagesEl.innerHTML += '<div class="ai-msg">AI: ' + aiText + '</div>';
         messagesEl.scrollTop = messagesEl.scrollHeight;
-      } catch (err) {
+      } catch (err) 
+      {
         console.error(err);
         messagesEl.innerHTML += '<div style="color:red;">Error: ' + err.message + '</div>';
       }
