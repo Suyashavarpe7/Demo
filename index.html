@@ -106,7 +106,6 @@
         const data = await response.json();
         const aiText = data.choices[0].message.content;
         history.push({ role: 'assistant', content: aiText });
-
         messagesEl.innerHTML += '<div class="ai-msg">AI: ' + aiText + '</div>';
         messagesEl.scrollTop = messagesEl.scrollHeight;
       } catch (err) 
