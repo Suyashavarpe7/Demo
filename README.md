@@ -124,5 +124,3 @@ Just fork, push your changes, and submit a pull request. Let’s build together!
 Licensed under the **MIT License**, same as the main repository base.
 
 ---
-Happy chatting!  
-Enjoy tweaking and sharing your ChatGPT demo.  
