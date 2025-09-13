@@ -18,7 +18,7 @@ Welcome to the **`demo/`** folder—a live playground showcasing how to integrat
 
 ---
 
-##  About This Demo
+##  About This Demo part
 
 This folder contains a minimal, working demonstration of the ChatGPT-powered app—designed to let you experience AI interaction firsthand. Ideal for prototyping and sharing!
 
