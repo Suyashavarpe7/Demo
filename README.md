@@ -1,6 +1,6 @@
 #  ChatGPT Demo
 
-Welcome to the **`demo/`** folder—a live playground showcasing how to integrate and explore capabilities! Whether you're testing prompts, refining user experience, or sharing with others, this demo gives you everything to dive in quickly.
+Welcome to the **`demo /`** folder—a live playground showcasing how to integrate and explore capabilities! Whether you're testing prompts, refining user experience, or sharing with others, this demo gives you everything to dive in quickly.
 
 ----
 
