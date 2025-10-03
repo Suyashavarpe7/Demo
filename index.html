@@ -79,8 +79,6 @@
       {
       const userText = inputEl.value.trim();
       if (!userText) return;
-
-      // Show user message
       history.push({ role: 'user', content: userText });
       messagesEl.innerHTML += '<div class="user-msg">You: ' + userText + '</div>';
       inputEl.value = '';
