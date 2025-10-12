@@ -78,7 +78,7 @@ Make sure you have:
 
 ---
 
-##  Deployment
+## Deployment
 
 Want to share the demo?
 
