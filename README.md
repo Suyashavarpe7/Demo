@@ -115,7 +115,7 @@ Your insights rock! Feel free to:
 -  Enhance UI/UX  
 -  Add new features  
 
-Just fork, push your changes, and submit a pull request. Let’s build together!
+
 
 ---
 
