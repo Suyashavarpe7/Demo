@@ -90,7 +90,7 @@ Want to share the demo?
 
 - **Netlify**:  
   1. Fork and connect to Netlify.  
-  2. Set environment variables.  
+  2. Set to environment variables.  
   3. Configure build & publish settings.  
   4. Hit **Deploy**!
 
