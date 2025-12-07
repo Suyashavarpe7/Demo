@@ -4,7 +4,6 @@
 
 ##  Table of Contents
 
-- [ About This Demo](#about-this-demo)  
 - [ Features](#features)  
 - [ Prerequisites](#prerequisites)  
 - [ Getting Started](#getting-started)  
