@@ -23,8 +23,7 @@ This folder contains a minimal, working demonstration of the ChatGPT-powered app
 ##  Features
 
 - 💬 Real-time chat powered by ChatGPT  
--  Supports multi-step conversations  
--  Easy-to-modify prompts for experimentation  
+-  Supports multi-step conversations   
 - 🖥️ Fully customizable UI (styling, messages, layout)  
 
 ---
