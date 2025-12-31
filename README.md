@@ -96,7 +96,7 @@ Want to share the demo?
 | Problem | Solution |
 |--------|----------|
 | API errors or rate limits | Check your OpenAI account and key validity |
-| CORS or network issues | Ensure Node.js version is v18+ and use proper proxy if needed |
+| CORS or network issues | Ensure Node.js version is v18+ and use proper proxy . |
 | UI glitches | Inspect console logs and adjust CSS or JS files in `src/` |
 
 ---
