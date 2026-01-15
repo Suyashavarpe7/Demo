@@ -1,4 +1,4 @@
-# <h1> Demo <h1>
+# <h2> Demo <h2>
 ----
 
 ##  Table of Contents
