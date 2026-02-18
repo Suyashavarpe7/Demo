@@ -13,7 +13,7 @@
 
 ---
 
-##  About This Demo part
+**##  About This Demo part**
 
 This folder contains a minimal,working demonstration of the ChatGPT-powered app—designed to let you experience AI interaction firsthand. Ideal for prototyping and sharing!
 
