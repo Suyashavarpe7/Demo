@@ -12,6 +12,7 @@
 - [ Contributing](#contributing)  
 
 ---
+
 ##  About This Demo part
 
 This folder contains a minimal, well working demonstration of the app—designed to let you experience AI interaction firsthand. Ideal for prototyping and sharing!
